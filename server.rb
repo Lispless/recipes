@@ -8,6 +8,7 @@ get '/' do
 end
 
 get '/recipe/:recipe_id' do
-	@recipe = find_recipe(params[:recipe_id])
+	@recipe_id = params[:recipe_id]
+	@recipe = find_recipe(@recipe_id)
 	erb :recipe_page
 end

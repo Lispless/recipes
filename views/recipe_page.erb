@@ -2,6 +2,21 @@
 	Here is the recipe page
 </h1>
 
-<h3>
-	Here is <%= recipe["name"] %>
-</h3>
+<div>
+	<ul>
+		<% @recipe.each do |recipe| %>
+		<li>
+			<%= recipe["name"] %>
+		</li>
+		<li>
+			<%= recipe["descriptions"] %>
+		</li>
+		<li>
+			<%= recipe["instructions"] %>
+		</li>
+		<li>
+			<%= recipe["ingredients"] %>
+		</li>
+		<% end %>
+	</ul>
+</div>
