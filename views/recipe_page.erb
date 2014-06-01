@@ -1,20 +1,27 @@
 <h1>
-	Here is the recipe page
+	<% @recipe.each do |recipe| %>
+	<%= recipe["name"] %>
+	<% end %>
 </h1>
 
 <div>
 	<ul>
 		<% @recipe.each do |recipe| %>
 		<li>
-			<%= recipe["name"] %>
-		</li>
-		<li>
+			A summary of what you could make:
+			<br />
 			<%= recipe["description"] %>
 		</li>
+		<br />
 		<li>
+			Here's the how:
+			<br />
 			<%= recipe["instructions"] %>
 		</li>
+		<br />
 		<li>
+			Before you start, here's what you'll need:
+			<br />
 			<%= recipe["ingredients"] %>
 		</li>
 		<% end %>
